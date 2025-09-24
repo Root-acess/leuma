@@ -135,6 +135,92 @@ Put Nginx or Caddy in front, or deploy the image to any PaaS that provides HTTPS
 
 ---
 
+# 🚀 CI/CD Pipeline with Jenkins & Vercel
+
+This project demonstrates a **Dockerized full-stack application** with a complete **CI/CD pipeline** powered by **Jenkins**.  
+The pipeline automates build, test, and deployment workflows, with seamless deployments to **Vercel** and rollback capability.
+
+---
+
+## 🔥 Features
+- 🐳 **Dockerized Full-Stack App** (Frontend + Backend)
+- ⚙️ **Automated CI/CD** pipeline using **Jenkins**
+- 🌐 **Continuous Deployment** to **Vercel**
+- 🔄 **Rollback support** to previous stable releases
+- ✅ Automated build & test workflow
+
+---
+
+## 🏗️ Tech Stack
+- **Frontend:** React / Next.js  
+- **Backend:** Node.js / Express (example setup)  
+- **Containerization:** Docker  
+- **CI/CD:** Jenkins  
+- **Hosting / Deployment:** Vercel  
+
+---
+
+## ⚙️ CI/CD Workflow (Jenkins)
+1. **Code Push to GitHub**  
+   - Developers commit & push changes to the repository.  
+
+2. **Jenkins Pipeline Triggered**  
+   - Jenkins listens for GitHub webhook events.  
+   - Pipeline stages:  
+     - 🔹 **Build**: Docker image build for frontend & backend  
+     - 🔹 **Test**: Run unit/integration tests  
+     - 🔹 **Package**: Create Docker artifacts  
+
+3. **Deployment to Vercel**  
+   - Jenkins pushes the latest build to **Vercel**.  
+   - Automatic environment configuration applied.  
+
+4. **Rollback Mechanism**  
+   - If deployment fails, Jenkins can rollback to the **last stable version** on Vercel.  
+
+---
+
+## 📂 Project Structure
+
+root/
+│── frontend/ # React or Next.js app
+│── backend/ # Node.js/Express API
+│── Jenkinsfile # Pipeline definition
+│── Dockerfile # Docker configuration
+│── docker-compose.yml
+
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Docker installed  
+- Jenkins server set up & running  
+- Vercel account  
+
+### Setup
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+
+    Build Docker containers
+
+docker-compose up --build
+
+Configure Jenkins Pipeline
+
+    Add your repository to Jenkins
+
+    Use the provided Jenkinsfile for pipeline definition
+
+    Add environment variables (Vercel token, secrets)
+
+Deploy
+
+    On successful pipeline run, the app will auto-deploy to Vercel.
+
 ## 📄 License
 
 Distributed under the MIT License. See **LICENSE** for details.
