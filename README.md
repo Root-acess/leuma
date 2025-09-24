@@ -135,7 +135,7 @@ Put Nginx or Caddy in front, or deploy the image to any PaaS that provides HTTPS
 
 ---
 
-# 🚀 CI/CD Pipeline with Jenkins & Vercel
+## 🚀 CI/CD Pipeline with Jenkins 
 
 This project demonstrates a **Dockerized full-stack application** with a complete **CI/CD pipeline** powered by **Jenkins**.  
 The pipeline automates build, test, and deployment workflows, with seamless deployments to **Vercel** and rollback capability.
@@ -202,8 +202,8 @@ root/
 ### Setup
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/Root-acess/leuma
+   cd leuma
 
     Build Docker containers
 
